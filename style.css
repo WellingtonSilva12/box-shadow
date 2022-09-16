@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter";
+  font-family: 'Inter';
 }
 html {
   font-size: 62.5%;
@@ -95,30 +95,54 @@ ul {
 
 .tooltip {
   position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  max-width: 20rem;
-  font-size: 1.2rem;
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #fff;
+  margin: 15px;
   text-align: center;
-  border-radius: 6px;
-  padding: 0.8rem;
+}
 
-  /* Position the tooltip */
+.tooltip::after {
+  background-color: #333;
+  border-radius: 4px;
+  color: #fff;
+  display: none;
+  padding: 0.5rem 1.2rem;
+  width: 12rem;
   position: absolute;
-  z-index: 1;
-  bottom: 105%;
+  text-align: center;
+  z-index: 999;
+}
+
+.tooltip.top::after {
+  content: 'Clique para copiar';
+  font-size: 1.2rem;
+  top: 0;
   left: 50%;
-  margin-left: -9.8rem;
+  transform: translate(-50%, calc(-100% - 10px));
 }
-.tooltip:hover .tooltiptext {
-  visibility: visible;
+
+.tooltip:hover::after {
+  display: block;
 }
+
+.tooltip::before {
+  background-color: #333;
+  content: ' ';
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+}
+
+.tooltip:hover::before {
+  display: block;
+}
+
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+
 @media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
