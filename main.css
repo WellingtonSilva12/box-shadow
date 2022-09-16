@@ -54,6 +54,7 @@ body > h1 {
   padding-inline: 5rem;
 }
 body > p {
+  margin-bottom: 5rem;
   padding-inline: 10rem;
   color: #1b1b1bcc;
 }
@@ -69,7 +70,7 @@ ul {
   grid-gap: 2rem;
   margin: 0 1.5rem;
   justify-items: center;
-  padding: 4em 0;
+  padding: 4rem 0;
   max-width: 102rem;
   margin: 0 auto;
 }
@@ -101,7 +102,6 @@ li.copied {
 
 .tooltip {
   position: relative;
-  margin: 15px;
   text-align: center;
 }
 
