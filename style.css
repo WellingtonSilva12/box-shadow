@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.header a.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.header a:hover {
+  transform: translateY(-0.5rem);
+  border-bottom: 2px solid dodgerblue;
+}
+.header-right a {
+  margin-left: 1.2rem;
+}
+.content-intro {
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.content-intro h1 {
+  font-size: 2.5rem;
+  color: #1b1b1b;
+  margin-bottom: 2.5rem;
+}
+
+.content-intro p {
+  font-size: 1.6rem;
+  color: rgba(27, 27, 27, 0.8);
+}
+
+.container-box-shadow {
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+.container-box-shadow .content-box-shadow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 2rem;
+  margin: 0 1.5rem;
+  justify-items: center;
+}
+
+.content-box-shadow li {
+  border: 2px solid red;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 5px;
+  display: grid;
+  place-content: center;
+  margin: 2.5rem 0;
+  cursor: pointer;
+}
+
+.content-box-shadow li:hover {
+  text-decoration: underline;
+}
+
+.content-box-shadow li p {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header a {
+    float: none;
+    display: block;
+    margin-left: 0;
+  }
+  .header a:hover {
+    transform: translateY(-0.5rem);
+    border-bottom: none;
+  }
+}
