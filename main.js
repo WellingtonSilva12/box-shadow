@@ -1,17 +1,15 @@
-// import { shadows } from './shadows.js'
-
 function copyToClipboard(value) {
   const tempInput = document.createElement('textarea')
   tempInput.style = 'position: absolute; left: -1000px; top: -1000px'
   tempInput.value = value
   document.body.appendChild(tempInput)
   tempInput.select()
+  document.execCommand('copy')
   document.body.removeChild(tempInput)
   return true
 }
 
 const ul = document.querySelector('ul')
-
 const shadows = [
   'rgba(149, 157, 165, 0.2) 0 8px 24px',
   '0 7px 29px 0 rgba(100,100,111,.2)',
